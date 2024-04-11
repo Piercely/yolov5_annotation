@@ -1,0 +1,125 @@
+D:\yolov5
+│  detect.py # 检测脚本
+│  hubconf.py # PyTorch Hub相关代码
+│  LICENSE # 版权文件
+│  README.md # README markdown文件
+│  requirements.txt # 项目所需的安装包列表
+│  sotabench.py # COCO数据集测试脚本
+│  test.py # 模型测试脚本
+│  train.py #模型训练脚本
+│  tutorial.ipynb # Jupyter Notebook演示代码
+│  
+│          
+├─data
+│  │  coco.yaml # COCO数据集配置文件
+│  │  coco128.yaml # COCO128数据集配置文件
+│  │  hyp.finetune.yaml # 超参数微调配置文件
+│  │  hyp.scratch.yaml # 超参数起始配置文件
+│  │  voc.yaml # VOC数据集配置文件
+│  │  
+│  └─scripts
+│          get_coco.sh # 下载COCO数据集shell命令
+│          get_voc.sh # 下载VOC数据集shell命令
+│          
+├─inference
+│  └─images # 示例图片文件夹
+│          bus.jpg
+│          zidane.jpg
+│          
+├─models
+│  │  common.py  # 模型组件定义代码
+│  │  experimental.py # 实验性质的代码
+│  │  export.py # 模型导出脚本
+│  │  yolo.py   # Detect及Model构建代码
+│  │  yolov5l.yaml # yolov5l网络模型配置文件
+│  │  yolov5m.yaml # yolov5m网络模型配置文件
+│  │  yolov5s.yaml # yolov5s网络模型配置文件
+│  │  yolov5x.yaml # yolov5x网络模型配置文件
+│  │  __init__.py
+│  │  
+│  └─hub
+│          yolov3-spp.yaml
+│          yolov5-fpn.yaml
+│          yolov5-panet.yaml
+│          
+├─runs  #训练结果
+│  ├─exp0
+│  │  │  events.out.tfevents.1604835533.PC-201807230204.26148.0
+│  │  │  hyp.yaml
+│  │  │  labels.png
+│  │  │  opt.yaml
+│  │  │  precision-recall_curve.png
+│  │  │  results.png
+│  │  │  results.txt
+│  │  │  test_batch0_gt.jpg
+│  │  │  test_batch0_pred.jpg
+│  │  │  train_batch0.jpg
+│  │  │  train_batch1.jpg
+│  │  │  train_batch2.jpg
+│  │  │  
+│  │  └─weights
+│  │          best.pt # 最好权重
+│  │          last.pt # 最近权重
+│  
+├─utils
+│  │  activations.py # 激活函数定义代码
+│  │  datasets.py # Dataset及Dataloader定义代码
+│  │  evolve.sh # 超参数进化命令
+│  │  general.py # 项目通用函数代码
+│  │  google_utils.py # 谷歌云使用相关代码
+│  │  torch_utils.py # 辅助程序代码
+│  │  __init__.py
+│  │  
+│  └─google_app_engine
+│          additional_requirements.txt
+│          app.yaml
+│          Dockerfile
+│          
+├─VOC  # 数据集目录
+│  ├─images # 数据集图片目录
+│  │  ├─train # 训练集图片文件夹
+│  │  │      000005.jpg
+│  │  │      000007.jpg
+│  │  │      000009.jpg
+│  │  │      000012.jpg
+│  │  │      000016.jpg          
+│  │  │      ......
+│  │  │  
+│  │  └─val  # 验证集图片文件夹
+│  │          000001.jpg
+│  │          000002.jpg
+│  │          000003.jpg
+│  │          000004.jpg
+│  │          000006.jpg
+│  │          ......
+│  │          
+│  └─labels # 数据集标签目录
+│      │  train.cache
+│      │  val.cache
+│      │  
+│      ├─train # 训练集标签文件夹
+│      │      000005.txt
+│      │      000007.txt
+│      │      000009.txt
+│      │      000012.txt
+│      │      000016.txt
+│      │      ......
+│      │      
+│      └─val  # 测试集标签文件夹
+│              000001.txt
+│              000002.txt
+│              000003.txt
+│              000004.txt
+│              000006.txt
+│              ......
+│
+└─weights
+    download_weights.sh # 下载权重文件命令
+    yolov5l.pt # yolov5l权重文件
+    yolov5m.pt # yolov5m权重文件
+    yolov5s.mlmodel # yolov5s权重文件(Core ML格式)
+    yolov5s.onnx # yolov5s权重文件(onnx格式)
+    yolov5s.pt # yolov5s权重文件
+    yolov5s.torchscript.pt # yolov5s权重文件(torchscript格式)
+    yolov5x.pt # yolov5x权重文件
+        
